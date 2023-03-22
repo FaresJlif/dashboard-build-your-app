@@ -1,11 +1,11 @@
-const {Box} = require("@mui/material");
-const { styled } =    require("@mui/system");
+const { Box } = require("@mui/material");
+const { styled } = require("@mui/system");
 
 
-const flexBetween = styled(Box)({
+const FlexBetween = styled(Box)({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center"
 });
 
-export default flexBetween;
+export default FlexBetween;
