@@ -17,6 +17,8 @@ import Breakdown from "scenes/breakdown";
 import Admin from "scenes/admin";
 import Performance from "scenes/performance";
 
+
+
 function App() {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -25,6 +27,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
@@ -39,12 +42,16 @@ function App() {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/performance" element={<Performance />} />
+              
             </Route>
           </Routes>
+         
+     
         </ThemeProvider>
       </BrowserRouter>
     </div>
   );
+ 
 }
 
 export default App;
